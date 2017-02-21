@@ -1,7 +1,9 @@
 "use strict";
 
 var React = require('react');
+
 var About = React.createClass({
+  //check out aggressive indent!
   render: function() {
     return (
       <div className="jumbotron">
