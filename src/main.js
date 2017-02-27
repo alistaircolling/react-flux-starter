@@ -1,8 +1,9 @@
 'use strict';
 var jQuery = require('jquery');
 var React = require('react');
-var Home = require('./components/homePage');
+var Home = require('./components/homePage/homePage');
 var About = require('./components/about/aboutPage');
+var Header = require('./components/common/header');
 
 var App = React.createClass({
   render: function(){
@@ -14,6 +15,7 @@ var App = React.createClass({
 
     return (
       <div>
+        <Header/>
         <Child/>
       </div>
     );
@@ -29,4 +31,4 @@ function render() {
 //Listens for address change in window
 window.addEventListener('hashchange', render);
 
-React.render(<Home />, document.getElementById('app'));
+React.render(<App />, document.getElementById('app'));
